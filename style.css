@@ -1,33 +1,21 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    margin: 0;
-    padding: 0;
-
 }
 
 .map-container {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+    width: 70%;
     position: relative;
 }
 
 .map {
     width: 100%;
-    height: 100%;
-    cursor: grab;
-}
-
-#panzoom-element:active {
-    cursor: grabbing;
 }
 
 .sidebar {
     width: 30%;
-    padding: 10px;
+    padding: 20px;
     background-color: #f4f4f4;
     border-left: 1px solid #ddd;
     display: none;
 }
-
