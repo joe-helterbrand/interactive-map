@@ -1,25 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const map = document.getElementById('interactive-map');
+    const floorplan = document.getElementById('floorplan');
     const sidebar = document.getElementById('sidebar');
-    const roomTitle = document.getElementById('room-title');
-    const roomDescription = document.getElementById('room-description');
-    const roomVideo = document.getElementById('room-video');
+    const roomInfo = document.getElementById('room-info');
+    let zoomLevel = 1;
 
-    // Initialize Panzoom
-    const panzoomElement = document.getElementById('panzoom-element');
-    const panzoom = Panzoom(panzoomElement, {
-        maxScale: 5,  // Maximum zoom level
-        minScale: 1,  // Minimum zoom level
-        contain: 'outside'  // Prevent zooming out too much
+    // Function to display room information
+    function showRoomInfo(roomName) {
+        roomInfo.innerHTML = `<p>Information about ${roomName} will be displayed here.</p>`;
+        sidebar.style.display = 'block';
+    }
+
+    // Handle clicking on a room in the floorplan (assuming rooms have IDs in SVG)
+    floorplan.addEventListener('load', function() {
+        const svg = floorplan.contentDocument;
+        const rooms = svg.querySelectorAll('g'); // Assuming rooms are within <g> elements
+
+        rooms.forEach(room => {
+            room.addEventListener('click', function() {
+                const roomName = room.getAttribute('id'); // Assuming room has an 'id' attribute
+                showRoomInfo(roomName);
+            });
+        });
     });
 
-    // Enable mouse wheel zoom
-    panzoomElement.addEventListener('wheel', panzoom.zoomWithWheel);
-    
-    map.addEventListener('load', function() {
-        const svgDoc = map.contentDocument;
-
-
-
+    // Zooming functionality
+    floorplan.addEventListener('wheel', function(event) {
+        if (event.deltaY > 0) {
+            zoomLevel -= 0.1;
+        } else {
+            zoomLevel += 0.1;
+        }
+        zoomLevel = Math.max(0.5, Math.min(2, zoomLevel)); // Limit zoom level between 0.5 and 2
+        floorplan.style.transform = `scale(${zoomLevel})`;
     });
 });
