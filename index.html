@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Facility Map</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
 </head>
 <body>
     <h1>Interactive Research Facility Map</h1>
     <div class="map-container">
-        <!-- Embed your SVG floorplan -->
-        <img src="floorplan.svg" class="map" alt="interactive-map">
+        <div id="panzoom-element">
+            <!-- Embed your SVG floorplan -->
+            <img src="floorplan.svg" class="map" alt="interactive-map">
     </div>
     <div class="sidebar" id="sidebar">
         <h2 id="room-title">Room Name</h2>
