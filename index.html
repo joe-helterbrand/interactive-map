@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Facility Map</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+    <title>Research Facility Floorplan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Interactive Research Facility Map</h1>
-    <div class="map-container">
-        <div id="panzoom-element">
-            <!-- Embed your SVG floorplan -->
-            <img src="floorplan.svg" class="map" alt="interactive-map">
-    </div>
-    <div class="sidebar" id="sidebar">
-        <h2 id="room-title">Room Name</h2>
-        <p id="room-description">Room description and research findings will appear here.</p>
-        <video id="room-video" controls>
-            <source src="" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div id="container">
+        <div id="sidebar">
+            <h2>Room Information</h2>
+            <div id="room-info">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+        <div id="floorplan-container">
+            <object id="floorplan" type="image/svg+xml" data="floorplan.svg"></object>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
