@@ -4,24 +4,20 @@ body {
 }
 
 .map-container {
-    width: 100%;
+    width: 190%;
     position: relative;
 }
 
 .map {
-    width: 100%;
+    width: 190%;
     height: auto;
 }
 
 .sidebar {
     width: 30%;
-    padding: 20px;
+    padding: 10px;
     background-color: #f4f4f4;
     border-left: 1px solid #ddd;
     display: none;
 }
 
-#room-video {
-    width: 100%;
-    margin-top: 10px;
-}
