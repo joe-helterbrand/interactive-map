@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Facility Floorplan</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Facility Map</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <div id="sidebar">
-            <h2>Room Information</h2>
-            <div id="room-info">
-                <!-- Dynamic content will be inserted here -->
-            </div>
-        </div>
-        <div id="floorplan-container">
-            <object id="floorplan" type="image/svg+xml" data="floorplan.svg"></object>
-        </div>
+  <div id="sidebar" class="hidden">
+    <button id="closeSidebar">Close</button>
+    <div id="roomInfo">
+      <!-- Room details will appear here -->
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <div id="map-container">
+    <img src="floorplan.svg" id="floorplan" alt="Research Facility Floorplan" />
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
