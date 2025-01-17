@@ -1,1 +1,19 @@
 
+<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+
+ <g class="layer" display="inline">
+  <title>Layer 1</title>
+  <image height="1136.31" id="svg_8" transform="matrix(1 0 0 1 0 0) matrix(2.87693e-17 0.469838 -0.469838 2.87693e-17 567.767 300.968)" width="1017" x="-640.49"   <rect fill="#872b2b" fill-opacity="0" height="24.38" id="special projects" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="matrix(1 0 0 1 0 0)" width="56.88" x="172.5" y="121.25"/>
+  <rect fill="#872b2b" fill-opacity="0" height="19.38" id="bulktank" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="matrix(1 0 0 1 0 0)" width="20.63" x="280" y="121.25"/>
+  <rect fill="#872b2b" fill-opacity="0" height="26.87" id="feedroom" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="matrix(1 0 0 1 0 0)" width="30.63" x="236.25" y="151.25"/>
+  <rect fill="#872b2b" fill-opacity="0" height="37.08" id="rotary" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="rotate(47.406 312.931 151.252)" width="24.83" x="300.52" y="132.71"/>
+  <rect fill="#872b2b" fill-opacity="0" height="61.2" id="specialneeds" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="matrix(1 0 0 1 0 0) rotate(45.6228 357.676 105.173)" width="22.22" x="346.57" y="74.58"/>
+  <rect fill="#872b2b" fill-opacity="0" height="46.3" id="nursery" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="matrix(1 0 0 1 0 0) rotate(47.0309 400.697 59.0939)" width="23.24" x="389.08" y="35.95"/>
+  <rect fill="#872b2b" fill-opacity="0" height="123.97" id="drycow" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="matrix(1 0 0 1 0 0) rotate(45.4007 406.986 106.319)" width="20.73" x="396.62" y="44.33"/>
+  <rect fill="#872b2b" fill-opacity="0" height="41.11" id="sorting" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="rotate(45 338.125 176.562)" width="21.48" x="327.39" y="156.01"/>
+  <rect fill="#872b2b" fill-opacity="0" height="29.38" id="robot" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="rotate(47.406 283.905 181.808)" width="13.24" x="277.29" y="167.12"/>
+  <rect fill="#872b2b" fill-opacity="0" height="173.1" id="lactating" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="rotate(43.9323 222.481 262.896)" width="62.06" x="191.45" y="176.35"/>
+  <rect fill="#872b2b" fill-opacity="0" height="140.92" id="heifer" stroke="#2d0808" stroke-opacity="0" stroke-width="5" transform="rotate(46.9415 81.8228 406.616)" width="63.72" x="49.96" y="336.16"/>
+ </g>
+</svg>
