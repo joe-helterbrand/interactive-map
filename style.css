@@ -26,24 +26,30 @@ body {
   flex: 1;
   background-color: #f4f4f4;
   padding: 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adjust shadow direction */
   position: relative;
   transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Start hidden off the left */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /* Stick to the left of the screen */
 }
 
 #sidebar.hidden {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 
 #close-sidebar {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px; /* Adjust button to match left sidebar */
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 
 #room-info {
   margin-top: 20px;
