@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Wait for SVG to load
   svgObject.addEventListener("load", () => {
     const svgDoc = svgObject.contentDocument;
-    const rooms = ["specialprojects", "feedroom", "bulktank", "rotary", "specialneeds", "nursery", "drycow", "sorting", "lactating", "robot", "heifer"];
+    const rooms = ["special projects", "feedroom", "bulktank", "rotary", "specialneeds", "nursery", "drycow", "sorting", "lactating", "robot", "heifer"];
 
     rooms.forEach((roomId) => {
       const roomElement = svgDoc.getElementById(roomId);
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         roomElement.style.cursor = "pointer";
         roomElement.addEventListener("click", () => {
           sidebar.classList.remove("hidden");
+          sidebar.classList.add("visible");
           roomInfo.textContent = `Information about ${roomId.replace(/([a-z])([A-Z])/g, '$1 $2')}.`;
         });
       }
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeSidebar.addEventListener("click", () => {
+    sidebar.classList.add("visible");
     sidebar.classList.add("hidden");
   });
 });
