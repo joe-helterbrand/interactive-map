@@ -4,11 +4,13 @@ body {
   padding: 0;
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 #container {
   display: flex;
   width: 100%;
+  height: 100%;
 }
 
 #floorplan {
@@ -27,13 +29,12 @@ body {
   background-color: #f4f4f4;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adjust shadow direction */
-  position: relative;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%); /* Start hidden off the left */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0; /* Stick to the left of the screen */
+  transition: transform 0.3s ease;
+  transform: translateX(-100%)
 }
 
 #sidebar.hidden {
