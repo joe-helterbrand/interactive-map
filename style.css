@@ -8,12 +8,12 @@ body {
 #container {
   display: flex;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: relative;
 }
 
 #floorplan {
-  flex: 3;
+  flex: 1;
   overflow: hidden;
 }
 
