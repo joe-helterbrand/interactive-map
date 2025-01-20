@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeSidebar = document.getElementById("close-sidebar");
   const roomInfo = document.getElementById("room-info");
 
+  // Room information
+  const roomDetails = {
+    specialprojects: "This room is used for housing cattle that are a part of special projects within the facility. Such projects include the Dairy Genome Project.",
+
+    
   // Wait for SVG to load
   svgObject.addEventListener("load", () => {
     const svgDoc = svgObject.contentDocument;
