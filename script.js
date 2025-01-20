@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   svgObject.addEventListener("load", () => {
     const svgDoc = svgObject.contentDocument;
     const rooms = [
-      "specialprojects",
+      "special projects",
       "feedroom",
       "bulktank",
       "rotary",
