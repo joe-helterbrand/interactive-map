@@ -14,30 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const svgDoc = svgObject.contentDocument;
     const rooms = ["special projects", "feedroom", "bulktank", "rotary", "specialneeds", "nursery", "drycow", "sorting", "lactating", "robot", "heifer"];
 
-let activeRoom = null;
+    rooms.forEach((roomId) => {
+      const roomElement = svgDoc.getElementById(roomId);
 
-rooms.forEach((roomId) => {
-  const roomElement = svgDoc.getElementById(roomId);
-
-  if (roomElement) {
-    roomElement.style.cursor = "pointer";
-
-    roomElement.addEventListener("click", () => {
-      // Remove highlight from the previously active room
-      if (activeRoom) {
-        activeRoom.style.stroke = ""; // Reset stroke
-        activeRoom.style.strokeWidth = ""; // Reset stroke width
+      if (roomElement) {
+        roomElement.style.cursor = "pointer";
+        roomElement.addEventListener("click", () => {
+          sidebar.classList.remove("hidden");
+          sidebar.classList.add("visible");
+          roomInfo.textContent = `Information about ${roomId.replace(/([a-z])([A-Z])/g, '$1 $2')}.`;
+        });
       }
-
-      // Highlight the selected room
-      roomElement.style.stroke = "red";
-      roomElement.style.strokeWidth = "3px";
-      activeRoom = roomElement;
-
-      // Show sidebar and set content
-      sidebar.classList.remove("hidden");
-      sidebar.classList.add("visible");
-      roomInfo.textContent = roomDetails[roomId];
     });
-  }
+  });
+
+  closeSidebar.addEventListener("click", () => {
+    sidebar.classList.add("visible");
+    sidebar.classList.add("hidden");
+  });
 });
+
