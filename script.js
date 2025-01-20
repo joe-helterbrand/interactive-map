@@ -4,16 +4,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeSidebar = document.getElementById("close-sidebar");
   const roomInfo = document.getElementById("room-info");
 
-  // Room information
-  const roomDetails = {
-    specialprojects: "This room is used for housing cattle that are a part of special projects within the facility. Such projects include the Dairy Genome Project.",
-
-    
   // Wait for SVG to load
   svgObject.addEventListener("load", () => {
     const svgDoc = svgObject.contentDocument;
-    const rooms = ["special projects", "feedroom", "bulktank", "rotary", "specialneeds", "nursery", "drycow", "sorting", "lactating", "robot", "heifer"];
+    const rooms = [
+      "specialprojects",
+      "feedroom",
+      "bulktank",
+      "rotary",
+      "specialneeds",
+      "nursery",
+      "drycow",
+      "sorting",
+      "lactating",
+      "robot",
+      "heifer"
+    ];
 
+    // Add click event listeners for each room
     rooms.forEach((roomId) => {
       const roomElement = svgDoc.getElementById(roomId);
 
@@ -28,9 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Close the sidebar
   closeSidebar.addEventListener("click", () => {
-    sidebar.classList.add("visible");
+    sidebar.classList.remove("visible");
     sidebar.classList.add("hidden");
   });
 });
-
