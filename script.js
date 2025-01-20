@@ -20,6 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
       "robot",
       "heifer"
     ];
+    const roomDetails = {
+  specialprojects: {
+    title: "Special Projects Room",
+    description: "This room is used for special projects and experiments related to dairy management.",
+    image: "images/specialprojects.jpg"
+  },
+  feedroom: {
+    title: "Feed Room",
+    description: "The feed room stores and processes feed for the dairy cattle.",
+    image: "images/feedroom.jpg"
+  },
+  bulktank: {
+    title: "Bulk Tank Room",
+    description: "This area contains the bulk tanks where milk is stored before transportation.",
+    image: "images/bulktank.jpg"
+  },
+  // Add other rooms similarly...
+};
 
     // Add click event listeners for each room
     rooms.forEach((roomId) => {
