@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const roomImage = document.getElementById("room-image");
 
   const roomDetails = {
-    specialprojects: {
+    special projects: {
       title: "Special Projects Room",
       description: "This room is used for special projects and experiments related to dairy management.",
       image: "images/specialprojects.jpg",
