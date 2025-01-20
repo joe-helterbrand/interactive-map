@@ -38,6 +38,27 @@ document.addEventListener("DOMContentLoaded", () => {
   },
   // Add other rooms similarly...
 };
+    roomElement.addEventListener("click", () => {
+  sidebar.classList.remove("hidden");
+  sidebar.classList.add("visible");
+
+  // Get the room details
+  const details = roomDetails[roomId];
+
+  // Update the sidebar content
+  document.getElementById("room-title").textContent = details.title;
+  document.getElementById("room-description").textContent = details.description;
+
+  const roomImage = document.getElementById("room-image");
+  if (details.image) {
+    roomImage.src = details.image;
+    roomImage.alt = details.title;
+    roomImage.classList.remove("hidden");
+  } else {
+    roomImage.classList.add("hidden");
+  }
+});
+
 
     // Add click event listeners for each room
     rooms.forEach((roomId) => {
