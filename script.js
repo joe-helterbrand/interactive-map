@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const roomDetails = {
     specialprojects: {
       title: "Special Projects Room",
-      description: "This room is used for special projects and experiments related to dairy management."
+      description: "This room is used for special projects. THe room itself is a different environment than the rest of the barn. One project currently being done in this area is the Resilient Dairy Genome Project. For more information go to..."
     },
     feedroom: {
       title: "Feed Room",
-      description: "The feed room stores and processes feed for the dairy cattle."
+      description: "The feed room stores and processes feed for the dairy cattle. All of our feed is made at the Precision Feed Facility. Two mixers can be found here to mix in supplements for the cattle."
     },
     bulktank: {
       title: "Bulk Tank Room",
-      description: "This area contains the bulk tanks where milk is stored before transportation."
+      description: "This area contains the bulk tanks where milk is stored before transportation. This large tank can hold 8,000 gallons of milk. In this room, there is also a smaller tank that holds 800 gallons of milk."
     }
     // Add other rooms as needed...
   };
