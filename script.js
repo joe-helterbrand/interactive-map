@@ -18,17 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Bulk Tank Room",
       description: "This area contains the bulk tanks where milk is stored before transportation."
     }
-    // Add more rooms as needed...
+    // Add other rooms as needed...
   };
 
   svgObject.addEventListener("load", () => {
     const svgDoc = svgObject.contentDocument;
 
+    // Add click handlers for each room
     Object.keys(roomDetails).forEach((roomId) => {
       const roomElement = svgDoc.getElementById(roomId);
 
       if (roomElement) {
         roomElement.style.cursor = "pointer";
+
         roomElement.addEventListener("click", () => {
           const details = roomDetails[roomId];
 
