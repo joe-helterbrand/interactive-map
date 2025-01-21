@@ -31,7 +31,7 @@ body {
   position: fixed; /* Sidebar fixed for smoother slide effect */
   top: 0;
   bottom: 0;
-  left: 0; /* Adjust to 'left: 0;' if the sidebar is on the left */
+  right: 0; /* Adjust to 'left: 0;' if the sidebar is on the left */
   width: 300px;
   transform: translateX(100%); /* Hidden by default (off-screen) */
   transition: transform 0.3s ease;
