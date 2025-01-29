@@ -24,13 +24,13 @@ header, footer {
   background: #f4f4f4;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 #sidebar.visible {
@@ -52,6 +52,7 @@ header, footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 300px; /* Prevent floorplan from being hidden by the sidebar */
 }
 
 #svg-floorplan {
@@ -61,4 +62,19 @@ header, footer {
 
 .hidden {
   display: none;
+}
+
+/* Highlight effect when hovering over rooms */
+.room {
+  fill: #ccc;
+  transition: fill 0.3s ease;
+}
+
+.room:hover {
+  fill: #ffcc00;
+  cursor: pointer;
+}
+
+.room.selected {
+  fill: #ff6600;
 }
