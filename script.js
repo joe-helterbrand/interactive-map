@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   svgObject.addEventListener("load", () => {
     const svgDoc = svgObject.contentDocument;
     
-    // Room details
+    // Load room data from JSON
     fetch("roomData.json")
       .then(response => response.json())
       .then(roomDetails => {
@@ -18,12 +18,26 @@ document.addEventListener("DOMContentLoaded", () => {
           const roomElement = svgDoc.getElementById(roomId);
 
           if (roomElement) {
-            roomElement.style.cursor = "pointer";
+            roomElement.classList.add("room"); // Add class for styling
+            roomElement.addEventListener("mouseover", () => {
+              roomElement.style.fill = "#ffcc00"; // Highlight on hover
+            });
+
+            roomElement.addEventListener("mouseout", () => {
+              roomElement.style.fill = ""; // Reset on mouse out
+            });
+
             roomElement.addEventListener("click", () => {
               const details = roomDetails[roomId];
+
+              // Remove previous highlights
+              svgDoc.querySelectorAll(".room").forEach(room => room.classList.remove("selected"));
+              roomElement.classList.add("selected"); // Highlight selected room
+
+              // Populate sidebar with room details
               roomTitle.textContent = details.title;
               roomDescription.textContent = details.description;
-              
+
               if (details.image) {
                 roomImage.src = details.image;
                 roomImage.alt = details.title;
