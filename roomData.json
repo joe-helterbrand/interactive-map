@@ -1,0 +1,57 @@
+{
+  "specialprojects": {
+    "title": "Special Projects Room",
+    "description": "This room is used for special projects and experiments related to dairy management.",
+    "image": "images/specialprojects.jpg"
+  },
+  "feedroom": {
+    "title": "Feed Room",
+    "description": "The feed room stores and processes feed for the dairy cattle.",
+    "image": "images/feedroom.jpg"
+  },
+  "bulktank": {
+    "title": "Bulk Tank Room",
+    "description": "This area contains the bulk tanks where milk is stored before transportation.",
+    "image": "images/bulktank.jpg"
+  },
+  "rotary": {
+    "title": "Rotary Milking Parlor",
+    "description": "A modern rotary system used for milking dairy cattle efficiently.",
+    "image": "images/rotary.jpg"
+  },
+  "specialneeds": {
+    "title": "Special Needs Area",
+    "description": "A dedicated space for cows requiring special care or treatment.",
+    "image": "images/specialneeds.jpg"
+  },
+  "nursery": {
+    "title": "Calf Nursery",
+    "description": "This area houses and cares for young calves.",
+    "image": "images/nursery.jpg"
+  },
+  "drycow": {
+    "title": "Dry Cow Barn",
+    "description": "A separate barn for cows in their dry period before calving.",
+    "image": "images/drycow.jpg"
+  },
+  "sorting": {
+    "title": "Sorting Area",
+    "description": "A handling system used for sorting cows into different pens.",
+    "image": "images/sorting.jpg"
+  },
+  "lactating": {
+    "title": "Lactating Cow Barn",
+    "description": "This barn houses the cows that are currently producing milk.",
+    "image": "images/lactating.jpg"
+  },
+  "robot": {
+    "title": "Robotic Milking Station",
+    "description": "A robotic system that allows cows to be milked on demand.",
+    "image": "images/robot.jpg"
+  },
+  "heifer": {
+    "title": "Heifer Barn",
+    "description": "This barn provides shelter for young female cows before they join the milking herd.",
+    "image": "images/heifer.jpg"
+  }
+}
