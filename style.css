@@ -29,13 +29,13 @@ header {
   display: flex;
   flex: 1;
   margin-top: 50px; /* Adjust based on header height */
-  overflow: hidden;
+  height: calc(100vh - 50px);
 }
 
 #sidebar {
   width: 300px;
   height: calc(100vh - 50px); /* Ensure full height minus header */
-  position: fixed; /* Keep it in place */
+  position: relative; 
   left: 0;
   top: 50px; /* Start below the header */
   bottom: 0;
@@ -43,6 +43,7 @@ header {
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  flex-shrink: 0;
 }
 
 #close-sidebar {
@@ -54,19 +55,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  position: relative;
+  overflow: auto;
   height: calc(100vh - 50px); /* Adjust for header */
   
 }
 
 #svg-floorplan {
-  width: 95%;
+  width: 100%;
   height: auto;
-  max-width: none;
+  max-width: 90%;
   max-height: 90vh;
-  object-fit: contaitn;
-  z-index: 10;
 }
 
 .highlight {
