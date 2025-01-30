@@ -28,17 +28,7 @@ header {
 }
 
 #sidebar {
-  width: 300px;
-  background: #f4f4f4;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  left: 0;
-  top: 50px; /* Below the header */
-  bottom: 0;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+  display: none;
 }
 
 
