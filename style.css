@@ -65,6 +65,7 @@ header {
   height: auto;
   max-width: 90%;
   max-height: 90vh;
+  position: relative; 
 }
 
 .highlight {
