@@ -37,6 +37,8 @@ header {
   top: 50px; /* Below the header */
   bottom: 0;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 
