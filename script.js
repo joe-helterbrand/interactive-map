@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const svgObject = document.getElementById("svg-floorplan");
   const sidebar = document.getElementById("sidebar");
-  const closeSidebar = document.getElementById("close-sidebar");
   const roomTitle = document.getElementById("room-title");
   const roomDescription = document.getElementById("room-description");
   const roomImage = document.getElementById("room-image");
 
-  // Load the SVG document
   svgObject.addEventListener("load", () => {
     const svgDoc = svgObject.contentDocument;
-    
+    if (!svgDoc) {
+      console.error("SVG document could not be loaded.");
+      return;
+    }
+
     // Load room data from JSON
     fetch("roomData.json")
       .then(response => response.json())
@@ -19,14 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (roomElement) {
             roomElement.classList.add("room"); // Add class for styling
+            
+            // Highlight on hover
             roomElement.addEventListener("mouseover", () => {
-              roomElement.style.fill = "#ffcc00"; // Highlight on hover
+              roomElement.style.fill = "#ffcc00";
             });
 
+            // Reset on mouse out
             roomElement.addEventListener("mouseout", () => {
-              roomElement.style.fill = ""; // Reset on mouse out
+              roomElement.style.fill = "";
             });
 
+            // Click event to update sidebar
             roomElement.addEventListener("click", () => {
               const details = roomDetails[roomId];
 
@@ -41,21 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
               if (details.image) {
                 roomImage.src = details.image;
                 roomImage.alt = details.title;
-                roomImage.classList.remove("hidden");
+                roomImage.style.display = "block";
               } else {
-                roomImage.classList.add("hidden");
+                roomImage.style.display = "none";
               }
-
-              sidebar.classList.add("visible");
             });
           }
         });
       })
       .catch(error => console.error("Error loading room data:", error));
-  });
-
-  // Close sidebar functionality
-  closeSidebar.addEventListener("click", () => {
-    sidebar.classList.remove("visible");
   });
 });
