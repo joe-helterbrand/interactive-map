@@ -51,7 +51,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  overflow: visible !important;
   height: calc(100vh - 50px); /* Adjust for header */
   margin-left: 300px;
 }
