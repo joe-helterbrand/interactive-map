@@ -55,17 +55,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
-  height: calc(100vh - 50px); /* Adjust for header */
+  overflow: hidden; /* Prevent unnecessary scrollbars */
+  height: calc(100vh - 50px); /* Full screen minus header */
+  width: calc(100vw - 300px); /* Full screen minus sidebar width */
   
 }
 
 #svg-floorplan {
   width: 100%;
-  height: auto;
-  max-width: 90%;
-  max-height: 90vh;
-  position: relative; 
+  height: 100%;
+  object-fit: contain;
 }
 
 .highlight {
