@@ -43,21 +43,21 @@ header {
   flex-shrink: 0; /* Prevents sidebar from shrinking */
 }
 
-/* Floorplan container should take the remaining space */
 #floorplan-container {
-  flex: 1; /* This ensures it takes up all remaining space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 50px); /* Full height minus header */
-  width: calc(100vw - 300px); /* Full width minus sidebar */
   overflow: hidden;
-  
+  max-width: calc(100vw - 300px); /* Ensure it fits next to the sidebar */
+  max-height: calc(100vh - 50px); /* Ensure it doesn't overflow below header */
 }
 
-/* Make sure the SVG scales properly */
+
 #svg-floorplan {
-  width: 200%;
-  height: 200%;
-  object-fit: contain;
+  max-width: 90%; /* Adjust this value to make it fit better */
+  max-height: 90%;
+  transform: scale(0.8); /* Shrink the SVG to 80% of its size */
+  transform-origin: center;
 }
+
